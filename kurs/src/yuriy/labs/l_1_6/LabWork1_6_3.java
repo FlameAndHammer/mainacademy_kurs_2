@@ -1,4 +1,4 @@
-package olena.labs.l_1_6;
+package yuriy.labs.l_1_6;
 
 /**
  * Created by Ruble on 09.03.2017.
