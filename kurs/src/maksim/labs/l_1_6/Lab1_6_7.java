@@ -28,24 +28,23 @@ public class Lab1_6_7 {
         System.out.println("Your matrix:");
         System.out.println();
         for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                System.out.print("\t" + equalsArray[i][j]);
-            }
+            System.out.print(Arrays.toString(equalsArray[i]));
             System.out.println();
         }
         System.out.println();
-        for (int elr = 0; elr < rows; elr++) {
-            for (int elc = 0; elc < cols; elc++) {
+        System.out.println("Enter the number that we are looking for:");
+        Scanner s = new Scanner(System.in);
                 int counts = 0;
-                int k = equalsArray[elr][elc];
-                System.out.println("Let's found equals for element in row #" + (elr + 1) + " and cell #" + (elc + 1) + " (" + k + ")");
+                int k = s.nextInt();
+                System.out.println("Let's found equals for your number " + k);
                 for (int i = 0; i < rows; i++) {
-                    System.out.print("In row " + (i + 1) + " there are equals in cells:");
+                    System.out.print("In row " + (i + 1) + " there are equals for " + k + " in cells:");
                     for (int j = 0; j < cols; j++) {
                         if (k == equalsArray[i][j]) {
                             ++counts;
                             System.out.print(" #" + (j + 1));
                         }
+
                     }
                     System.out.println();
                 }
@@ -54,5 +53,5 @@ public class Lab1_6_7 {
             }
 
         }
-    }
-}
+
+

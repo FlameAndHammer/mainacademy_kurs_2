@@ -9,7 +9,7 @@ public class Lab1_5_4 {
         for (int loop = 1; loop <= 300; loop++){
             int a3 = loop % 3;
             int a4 = loop % 4;
-            if (loop > 3 && nn <=10 && (a3 == 0 || a4 == 0)){
+            if (loop > 2 && nn <= 10 && (a3 == 0 || a4 == 0)){
                 System.out.println(nn + ". Number " + loop + " is devisible evenly by 3 or 4");
                 nn++;
             }

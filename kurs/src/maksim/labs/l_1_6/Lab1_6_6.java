@@ -11,41 +11,64 @@ public class Lab1_6_6 {
         System.out.println("Let's remember weather in 2015");
         int[] months = new int[12];
         String mo = "";
-        for (int i = 0; i < 12; i++){
+        for (int i = 0; i < 12; i++) {
             int numberOfMonths = i + 1;
-            switch (numberOfMonths){
-                case 1: mo = "Jan";
+            switch (numberOfMonths) {
+                case 1:
+                    mo = "Jan";
                     break;
-                case 2: mo = "Feb";
+                case 2:
+                    mo = "Feb";
                     break;
-                case 3: mo = "Mar";
+                case 3:
+                    mo = "Mar";
                     break;
-                case 4: mo = "Apr";
+                case 4:
+                    mo = "Apr";
                     break;
-                case 5: mo = "May";
+                case 5:
+                    mo = "May";
                     break;
-                case 6: mo = "Jun";
+                case 6:
+                    mo = "Jun";
                     break;
-                case 7: mo = "Jul";
+                case 7:
+                    mo = "Jul";
                     break;
-                case 8: mo = "Aug";
+                case 8:
+                    mo = "Aug";
                     break;
-                case 9: mo = "Sep";
+                case 9:
+                    mo = "Sep";
                     break;
-                case 10: mo = "Oct";
+                case 10:
+                    mo = "Oct";
                     break;
-                case 11: mo = "Nov";
+                case 11:
+                    mo = "Nov";
                     break;
-                case 12: mo = "Dec";
+                case 12:
+                    mo = "Dec";
                     break;
             }
-            System.out.println("Do you remember what was the temperature in " + mo + " 2015? " );
+            System.out.println("Do you remember what was the temperature in " + mo + " 2015? ");
             Scanner sc = new Scanner(System.in);
             months[i] = sc.nextInt();
         }
         System.out.println();
         System.out.println("Now let's look at temperature from the coldest to the hottest month:");
-        Arrays.sort(months);
+        int min;
+        for (int i = 0; i < months.length - 1; i++) {
+            for (int j = 0; j < months.length - i - 1; j++) {
+                if (months[j] > months[j + 1]) {
+                    min = months[j];
+                    months[j] = months[j + 1];
+                    months[j + 1] = min;
+                }
+            }
+        }
         System.out.println(Arrays.toString(months));
+
     }
 }
+

@@ -15,5 +15,6 @@ public class Lab1_5_5 {
             sum += q;
         }
         System.out.println("Σ = " + sum);
+        System.out.println("Average: " + sum / limit);
     }
 }
