@@ -5,6 +5,10 @@ package maksim.labs.l_2_1;
  */
 public class Computer {
     public static void main(String[] args) {
-        System.out.println("Hi, my name is... Max");
+        String manufacturer;
+        int serialNumber;
+        float price;
+        int quantityCPU;
+        int frequencyCPU;
     }
 }
