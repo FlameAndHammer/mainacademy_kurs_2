@@ -1,8 +1,8 @@
 package slavik.labs.l_2_1;
 public class Computer {
-    String manufacturer = null;
-    int serialNumber = 0;
-    float price = 0f;
-    int quantityCPU = 0;
-    int frequencyCPU = 0;
+    private String manufacturer = null;
+    private int serialNumber = 0;
+    private float price = 0f;
+    private int quantityCPU = 0;
+    private int frequencyCPU = 0;
     }
