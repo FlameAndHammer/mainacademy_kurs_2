@@ -13,6 +13,7 @@ Write Computer class, the attributes of this class is manufacturer (of String ty
 
 public class Computer {
     public static void main(String[] args) {
+        System.out.println("LabWork_2_1_1 by Yuriy Denezhko:");
 
     }
 }
