@@ -10,6 +10,7 @@ public class myLab151 {
             System.out.println(x);
             x++;
             System.out.println(x);
+            System.out.println("difference");
         }
         }
     }
