@@ -15,7 +15,4 @@ public class Computer {
         private int quantityCPU;
         private int frequencyCPU;
 
-    public static void main(String[] args) {
-
-    }
 }
