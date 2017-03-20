@@ -13,7 +13,7 @@ public class four {
         int f = --e;
         int g= 5;
         int j=g--;
-        System.out.println(b);
+        System.out.println(b + " ");
         System.out.println(d);
         System.out.println(f);
         System.out.println(j);
