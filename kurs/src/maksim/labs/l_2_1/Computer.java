@@ -13,7 +13,6 @@ public class Computer {
 
 
     public String getManufacturer() {
-
         return manufacturer;
     }
 
