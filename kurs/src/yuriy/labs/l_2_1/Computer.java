@@ -1,19 +1,78 @@
 package yuriy.labs.l_2_1;
 
-/**
- * Created by Ruble on 20.03.2017.
- */
 
-/*
 
-Write Computer class, the attributes of this class is manufacturer (of String type),
-        serialNumber (of int type), price (of float type), quantityCPU (of int type) and
-        frequencyCPU (of int type).
-*/
 
 public class Computer {
-    public static void main(String[] args) {
-        System.out.println("LabWork_2_1_1 by Yuriy Denezhko:");
+    private String manufacturer;
+    private float price;
+    private int quantityCPU;
+    private int frequencyCPU;
+    private int serialNumber;
+
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    public int getSerialNumber() {
+        return serialNumber;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+    public int getQuantityCPU() {
+        return quantityCPU;
+    }
+
+    public int getFrequencyCPU() {
+        return frequencyCPU;
+    }
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public void setSerialNumber(int serialNumber) {
+        this.serialNumber = serialNumber;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+    public void setQuantityCPU(int quantityCPU) {
+        this.quantityCPU = quantityCPU;
+    }
+
+    public void setFrequencyCPU(int frequencyCPU) {
+        this.frequencyCPU = frequencyCPU;
+    }
+
+
+
+  public static void view(String[] args){
+        for (int i = 0; i < 5; i++){
+           // System.out.println(Computer);
+
+
+        }
+
+
 
     }
-}
+
+    /*public static void main(String[] args) {
+        Computer[] computerArray = new Computer[5];
+        for (int i = 0; i < 5; i++){
+            computerArray[i] = new Computer();
+            computerArray[i].price += (i + 2);
+            computerArray[i].price *= 0.1;
+
+        }*/
+
+    }
+
+
+
+
