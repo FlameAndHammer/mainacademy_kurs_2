@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class Lab152 {
     public static void main(String[] args) {
         System.out.println("Enter number: ");
-        Scanner chislo = new Scanner(System.in);
-        int x = chislo.nextInt();
+        Scanner param = new Scanner(System.in);
+        int x = param.nextInt();
         if (x==1) System.out.println("- One");
         else if (x==2) System.out.println("- Two");
         else if (x==3) System.out.println("- Three");
