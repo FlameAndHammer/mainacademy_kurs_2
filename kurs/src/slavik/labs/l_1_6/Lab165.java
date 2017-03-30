@@ -12,8 +12,7 @@ public class Lab165 {
         System.out.println("Enter number:");
         for (int i = 0; i < lengthI; i++) {
             for (int j = 0; j < lengthJ; j++) {
-                String aString = Integer.toString(param.nextInt());
-                arr[i][j] =  aString;
+                arr[i][j] = Integer.toString(param.nextInt());
             }
         }
         System.out.println("Old matrica 4x4:");
