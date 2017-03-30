@@ -6,7 +6,6 @@ public class Lab165 {
         System.out.println("Length array 4x4");
         int lengthI = 4;
         int lengthJ = 4;
-        String temp;
         String [][] array = new String[lengthI] [lengthJ];
         String [][] arr = new String[lengthI] [lengthJ];
         Scanner param = new Scanner(System.in);
