@@ -1,4 +1,4 @@
-package artur.labs.l_2_2.l_2_2_3;
+package artur.labs.l_2_2_3;
 
 /**
  * Created by Arthur on 30.03.2017.
