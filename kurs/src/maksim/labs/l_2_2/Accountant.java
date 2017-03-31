@@ -14,10 +14,10 @@ public class Accountant {
         Employee empl = new Employee();
         double salary = 0;
         for (int i = 1; i <= 12; i++) {
-            salary = (Math.random() * 1000);
+            salary = 500 + (Math.random() * 1000);
             empl.calcSalary(name, salary);
             System.out.println(salary);
         }
-        System.out.println(name + " " + empl.calcSalary(name, salary));
+        System.out.println("Last name: " + name + "\nTotal salary: " + empl.calcSalary(name,salary));
     }
 }
