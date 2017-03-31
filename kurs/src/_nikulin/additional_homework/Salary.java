@@ -3,15 +3,15 @@ package _nikulin.additional_homework;
 /**
  * Created by nikulin on 3/31/2017.
  */
-class Employee2 {
+class Employee3 {
     Salary main;
     Salary additional;
-    Employee2(Salary  i, Salary add)  {
+    Employee3(Salary  i, Salary add)  {
         this(i);
         additional = add;
         System.out.println("Good day employee!");
     }
-    Employee2(Salary  i){
+    Employee3(Salary  i){
         main = i;
         System.out.println("Main salary!");
     }
@@ -34,10 +34,10 @@ public class Salary {
         return sum;
     }
   public static void main(String[] args) {
-    Employee2 empl = new Employee2(new Salary(100), new Salary(300));
+    Employee3 empl = new Employee3(new Salary(100), new Salary(300));
       empl.showTotal();
 
-    Employee2 e1 = new Employee2(new Salary(200));
+    Employee3 e1 = new Employee3(new Salary(200));
       e1.showTotal();
   }
 
