@@ -8,7 +8,7 @@ public class Accountant {
         String name = "";
         for (int i = 0; i < (int) (3 + (Math.random() * 10)); i++) {
             Random r = new Random();
-            char c = (char) (r.nextInt(26) + 'a');
+            char c = (char) (r.nextInt(26) + 'A');
             name += c;
         }
         Employee empl = new Employee();
@@ -16,8 +16,9 @@ public class Accountant {
         for (int i = 1; i <= 12; i++) {
             salary = 500 + (Math.random() * 1000);
             empl.calcSalary(name, salary);
-            System.out.println(salary);
+            System.out.println((String.format("%(.2f",salary)));
         }
-        System.out.println("Last name: " + name + "\nTotal salary: " + empl.calcSalary(name,salary));
+        double total = empl.getTotalSalary();
+        System.out.println("Last name: " + name + "\nTotal salary: " + (String.format("%(.2f",total)));
     }
 }

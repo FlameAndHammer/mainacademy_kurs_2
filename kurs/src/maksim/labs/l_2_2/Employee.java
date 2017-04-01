@@ -4,9 +4,9 @@ package maksim.labs.l_2_2;
  * Created by Пк on 30.03.2017.
  */
 public class Employee {
-    double totalSalary;
+    double totalSalary = 0;
     public double calcSalary(String name, double... salary){
-         //totalSalary = 0;
+
         for (double x : salary) {
             totalSalary += x;
         }
@@ -16,9 +16,5 @@ public class Employee {
 
     public double getTotalSalary() {
         return totalSalary;
-    }
-
-    public void view(){
-
     }
 }
