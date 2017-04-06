@@ -15,13 +15,15 @@ public class MyMath {
     public static final double PI = Math.PI;
 
     public int findMin(int[] array){
-        Arrays.sort(array); //@Nikulin incorrect to change source array when we try to find something.
-        return array[0];
+        int[] arrayCopy = array;
+        Arrays.sort(arrayCopy);
+        return arrayCopy[0];
     }
 
     public int findMax(int[] array){
-        //Arrays.sort(array);
-        return array[array.length-1];
+        int[] arrayCopy = array;
+        Arrays.sort(arrayCopy);
+        return arrayCopy[arrayCopy.length-1];
     }
 
     public double calcArea(double radius){
