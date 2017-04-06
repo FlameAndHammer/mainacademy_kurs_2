@@ -8,7 +8,7 @@ import java.util.Random;
  */
 public class MyInit {
     static int[] arr = new int[10];
-    //static{               //lab.2.5.3 - if initialization block will be static then array will be initialized once
+    //static{               //lab.2.5.4 - if initialization block will be static then array will be initialized once
     {
         for (int i = 0; i < arr.length; i++){
             Random rnd = new Random();
@@ -25,7 +25,7 @@ public class MyInit {
         Array1.printArray(arr);
         MyInit Array2 = new MyInit();
         Array2.printArray(arr);
-        MyInit Array3 = new MyInit(); //lab 2.5.3 (continue) - and all of Arrays will be the same as first one
+        MyInit Array3 = new MyInit(); //lab 2.5.4 (continue) - and all of Arrays will be the same as first one
         Array3.printArray(arr);
     }
 }
