@@ -1,5 +1,7 @@
 package maksim.labs.l_2_4;
 
+import java.util.Scanner;
+
 /**
  * Created by Пк on 05.04.2017.
  */
@@ -19,6 +21,9 @@ public class MyCalc {
 
     public static void main(String[] args) {
         MyCalc approx = new MyCalc();
-        approx.calcPi(1111111111); //@Nikulin may be add Scanner?
+        System.out.println("Enter the number of approximation:");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        approx.calcPi(n); //@Nikulin may be add Scanner? //@Grabov don't have a time for all these Scanners :)
     }
 }
