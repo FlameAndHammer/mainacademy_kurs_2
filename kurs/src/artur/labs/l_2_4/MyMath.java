@@ -15,7 +15,7 @@ public class MyMath {
     public static final double PI = Math.PI;
 
     public int findMin(int[] array){
-        Arrays.sort(array);
+        Arrays.sort(array); //@Nikulin incorrect to change source array when we try to find something.
         return array[0];
     }
 

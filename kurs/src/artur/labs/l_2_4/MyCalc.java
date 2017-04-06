@@ -12,7 +12,7 @@ public class MyCalc {
     public static double calcPi (int n){
         double sequence = 0;
         for (int i=1; i<=n; i++){
-            sequence +=  Math.pow(-1,i) * 4 / (i*2 + 1) ;
+            sequence +=  Math.pow(-1,i) * 4 / (i*2 + 1) ; //@Nikulin interesting idea to change sign
         }
         double pi = 4 + sequence ;
         return pi;

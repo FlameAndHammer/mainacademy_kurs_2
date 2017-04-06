@@ -22,7 +22,7 @@ public class MyPiramid {
                 left += i ;
                 right += (middle - i);
             }
-            System.out.println(left + middle + right);
+            System.out.println(left + middle + right); //@Nikulin Non-symmetric pyramid
         }
     }
 
