@@ -6,19 +6,19 @@ import java.util.Scanner;
  * Created by Пк on 06.04.2017.
  */
 public class GravityCalculator {
-    private static final double G = 9.81;
+    private static final double G = -9.81;
 
     public void calcDist (double doubleTime, double vi, double xi){
         double t = doubleTime / 2;
-        double xt = 0.5 * G * (Math.pow(t, 2)) + vi * t;
+        double xt = 0.5 * G * (Math.pow(t, 2)) + vi * t + xi;
         System.out.println("Start conditions.");
-        System.out.println("Start position:\t" + xi + " m");
-        System.out.println("Start speed:\t" + vi + " m/s");
-        System.out.println("Time of falling:\t" + t + " s");
+        System.out.println("Start position:\t\t" + xi + " m");
+        System.out.println("Start speed:\t\t" + vi + " m/s");
+        System.out.println("Time of falling:\t\t" + t + " s");
         System.out.println("Gravity:\tEarth");
         System.out.println();
         if (xi > 0) {
-            System.out.println("The object will fall by " + xt + " meters\nand will be in " + (xi - xt) + " meters from earth");
+            System.out.println("The object will fall by " + xt + " meters");
         }
         else {
             System.out.println("The object is on the earth");
