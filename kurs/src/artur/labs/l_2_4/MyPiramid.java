@@ -8,9 +8,9 @@ import java.util.Scanner;
  Which takes the parameter h an integer between 1 and 9 and outputs pyramids
  Number of height h.
  Example: H = 4 method should print pyramids
- 1
- 121
- 12321
+    1
+   121
+  12321
  1234321
  */
 public class MyPiramid {
@@ -18,11 +18,13 @@ public class MyPiramid {
         for ( int middle = 1; middle <= n; middle++) { // lines
             String left = "";
             String right = "";
+            StringBuffer space = new StringBuffer("         ");
             for (int i = 1; i < middle; i++) { // figures inside each line
                 left += i ;
                 right += (middle - i);
+                space.delete(0,1);
             }
-            System.out.println(left + middle + right); //@Nikulin Non-symmetric pyramid
+            System.out.println(space + left + middle + right + space);
         }
     }
 
