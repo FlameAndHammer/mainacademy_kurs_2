@@ -8,8 +8,7 @@ import java.util.Scanner;
 public class GravityCalculator {
     private static final double G = -9.81;
 
-    public void calcDist (double doubleTime, double vi, double xi){
-        double t = doubleTime / 2;
+    public void calcDist (double t, double vi, double xi){
         double xt = 0.5 * G * (Math.pow(t, 2)) + vi * t + xi;
         System.out.println("Start conditions.");
         System.out.println("Start position:\t\t" + xi + " m");
@@ -37,8 +36,8 @@ public class GravityCalculator {
         double vi = scv.nextDouble();
         System.out.println("Enter time of object falling in seconds:");
         Scanner scs = new Scanner(System.in);
-        double doubleTime = scs.nextDouble() * 2;
+        double t = scs.nextDouble();
         GravityCalculator gc = new GravityCalculator();
-        gc.calcDist(doubleTime, vi, xi);
+        gc.calcDist(t, vi, xi);
     }
 }
