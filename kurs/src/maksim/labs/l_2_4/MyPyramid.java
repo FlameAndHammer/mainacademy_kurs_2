@@ -7,7 +7,7 @@ import java.util.Scanner;
  */
 public class MyPyramid {
     public static void printPyramid(int h){
-
+        //@Nikulin would you remember what variables i,h,j,k,sp means after one month?
         for (int i = 1; i <= h; i++){
             for (int sp = h - i; sp >= 1; sp--){
                 System.out.print("\t");

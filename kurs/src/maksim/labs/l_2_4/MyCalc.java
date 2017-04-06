@@ -19,6 +19,6 @@ public class MyCalc {
 
     public static void main(String[] args) {
         MyCalc approx = new MyCalc();
-        approx.calcPi(1111111111);
+        approx.calcPi(1111111111); //@Nikulin may be add Scanner?
     }
 }
