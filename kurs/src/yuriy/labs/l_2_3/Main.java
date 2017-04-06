@@ -17,17 +17,18 @@ public class Main {
 
             arrayWindow[i].setWidth((double) (Math.random() * (Math.pow(10, 3))));
             arrayWindow[i].setHeight((double) (Math.random() * (Math.pow(10, 4))));
-            arrayWindow[i].setNumberOfGlass((int) (Math.random() * (Math.pow(10, 4))));
+            arrayWindow[i].setNumberOfGlass((int) (Math.random() * 4) + 1);
             arrayWindow[i].setColor(MyWindow.randColor());
             arrayWindow[i].setOpen(MyWindow.randBoolean());
-
-
-
-
-
+            arrayWindow[i].printFields();
 
         }
-
+        /*
+    Lab Work 2-3-2
+    2) Create instance of class MyWindow using constructor without parameters.
+    */
+        MyWindow window1 = new MyWindow();
+        window1.printFields();
     }
 
 }

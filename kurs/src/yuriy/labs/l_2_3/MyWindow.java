@@ -74,5 +74,55 @@ public class MyWindow {
         return randColor;
     }
 
+    public void printFields (){
+        System.out.print("MyWindow: width: " + width);
+        System.out.print("\theight: " + height);
+        System.out.print("\tnumberOfGlass: " + numberOfGlass);
+        System.out.print("\tisOpen: " + isOpen);
+        System.out.println("\tcolor: " + color);
+    }
+    /*
+    Lab Work 2-3-2
+    1) Add to class MyWindow constructor without parameters, which will initialize class’s
+    fields by some default values.
+    */
+    public MyWindow (){
+        width = 350;
+        height = 500;
+        numberOfGlass = 4;
+        color = "white";
+        isOpen = true;
+
+    }
+    public MyWindow (double width, double height){
+        this.width = width;
+        this.height = height;
+    }
+    public MyWindow (double width, double height, int numberOfGlass){
+       /* Lab Work 2-3-3
+        this.width = width;
+        this.height = height;
+        this.numberOfGlass = numberOfGlass;*/
+
+        //Lab Work 2-3-4
+        this(width,  height,  numberOfGlass, "green", false);
+    }
+    public MyWindow (double width, double height, int numberOfGlass, String color){
+       /* Lab Work 2-3-3
+        this.width = width;
+        this.height = height;
+        this.numberOfGlass = numberOfGlass;
+        this.color = color;*/
+        //Lab Work 2-3-4
+       this(width,  height,  numberOfGlass, color, false);
+    }
+    public MyWindow (double width, double height, int numberOfGlass, String color, boolean isOpen){
+        this.width = width;
+        this.height = height;
+        this.numberOfGlass = numberOfGlass;
+        this.color = color;
+        this.isOpen = isOpen;
+
+    }
 
 }
