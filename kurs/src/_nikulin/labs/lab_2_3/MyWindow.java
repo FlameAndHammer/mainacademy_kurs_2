@@ -16,6 +16,8 @@ public class MyWindow {
         this.isOpen = isOpen;
     }
 
+
+
     public void printFields() {
         System.out.println("Window: Width: " + width + "\tHeight: " + height + "\tColor: " + color +
                 "\tGlass: " + numberOfGlass + "\tOpen: " + isOpen);
@@ -32,11 +34,8 @@ public class MyWindow {
 
         // lab 2_3_3 and lab 2_3_4
     public MyWindow(double width, double height) {
-        // lab 2_3_3
-//        this.width = width;
-//        this.height = height;
-            // lab 2_3_4
-        this(width, height, "white", 2, false);
+
+        this(width, height, "grey", 3, false );
     }
 
     public MyWindow(double width, double height, int numberOfGlass) {
@@ -45,6 +44,6 @@ public class MyWindow {
 //        this.height = height;
 //        this.numberOfGlass = numberOfGlass;
             // lab 2_3_4
-        this(width, height, "gray", numberOfGlass, false);
+        this(width, height, "", numberOfGlass, true);
     }
 }
