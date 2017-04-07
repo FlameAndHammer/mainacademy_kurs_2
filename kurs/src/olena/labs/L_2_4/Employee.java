@@ -14,7 +14,7 @@ public class Employee {
         return numberOfEmployees;
     }
 
-    public static void setNumberOfEmployees(int numberOfEmployees) {
+    static void setNumberOfEmployees(int numberOfEmployees) {
         Employee.numberOfEmployees = numberOfEmployees;
     }
 
