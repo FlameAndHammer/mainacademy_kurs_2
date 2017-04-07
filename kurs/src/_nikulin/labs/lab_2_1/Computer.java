@@ -21,17 +21,12 @@ public class Computer {
     public void setSerialNumber(int serialNumber) {
         this.serialNumber = serialNumber;
     }
+    public void setQuantityCPU(int quantityCPU) {this.quantityCPU = quantityCPU;}
     public double getPrice() {
         return price;
     }
     public void setPrice(double price) {
         this.price = price;
-    }
-    public int getQuantityCPU() {
-        return quantityCPU;
-    }
-    public void setQuantityCPU(int quantityCPU) {
-        this.quantityCPU = quantityCPU;
     }
     public int getFrequencyCPU() {
         return frequencyCPU;
@@ -45,7 +40,8 @@ public class Computer {
         System.out.print("Manufacturer: " + manufacturer);
         System.out.print("; SerialNumber: " + serialNumber);
         System.out.print("; Price: " + price);
-        System.out.print("; QuantityCPU: " + quantityCPU);
         System.out.println("; FrequencyCPU: " + frequencyCPU);
     }
+
+
 }
