@@ -1,5 +1,4 @@
 package olena.labs.L_2_4;
-import java.util.Arrays;
 
 /**
  * Created by elenafostachuk on 4/7/17.
@@ -15,7 +14,7 @@ public class MyMath {
                 min = arr[i];
             }
         }
-        System.out.println(Arrays.toString(arr) + min);
+        System.out.println(min);
         return min;
     }
 
@@ -26,7 +25,7 @@ public class MyMath {
                 max = arr[i];
             }
         }
-        System.out.println(Arrays.toString(arr) + max);
+        System.out.println(max);
         return max;
     }
 
