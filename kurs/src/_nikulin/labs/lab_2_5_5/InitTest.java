@@ -20,7 +20,7 @@ public class InitTest {
         return id;
     }
 
-    public static int getNextId() {
+    /*public static int getNextId() {
         return nextId;
-    }
+    }*/
 }

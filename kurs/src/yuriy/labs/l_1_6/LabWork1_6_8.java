@@ -50,7 +50,7 @@ public class LabWork1_6_8 {
                 sortArr[dig256(array[j], i)]++;
             }
 
-            for (int j = 1; j < 10; j++) {
+            for (int j = 1; j < 10-1; j++) {
                 sortArr[j] += sortArr[j - 1];
             }
 
