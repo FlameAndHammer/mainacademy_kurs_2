@@ -1,4 +1,4 @@
-package irina.labs.l_1_5;
+package irina.labs.L_1_5;
 
 import java.util.Scanner;
 
