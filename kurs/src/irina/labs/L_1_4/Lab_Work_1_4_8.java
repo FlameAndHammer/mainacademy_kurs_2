@@ -1,11 +1,11 @@
-package irina.labs.l_1_4;
+package irina.labs.L_1_4;
 
 /**
  * Created by epub on 3/5/2017.
  */
 public class Lab_Work_1_4_8 {
     public static void main(String[] args) {
-        int a = 10;
+        int a = 20;
         int w = 300;
         short b = (short) a;
         byte c = 127;

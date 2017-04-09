@@ -1,4 +1,4 @@
-package irina.labs.l_1_5;
+package irina.labs.L_1_5;
 
 /**
  * Created by epub on 3/5/2017.
