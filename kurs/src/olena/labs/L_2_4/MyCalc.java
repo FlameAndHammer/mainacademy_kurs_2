@@ -19,7 +19,6 @@ public class MyCalc {
         return pi;
     }
 
-
     public static void main(String[] args) {
         System.out.print("Input some number");
         Scanner number = new Scanner(System.in);
