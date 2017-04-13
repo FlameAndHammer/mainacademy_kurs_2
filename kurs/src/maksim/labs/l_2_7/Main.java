@@ -14,7 +14,7 @@ public class Main {
             Device someDevice = new Device();
             someDevice.setManufacturer("Famous manufacturer with apple on the logo");
             someDevice.setPrice((float)(7000 + (Math.random() * 3000)));
-            someDevice.setSerialNumber("FM-MacPRO/" + (int)(100000 + (Math.random() * 899999)));
+            someDevice.setSerialNumber("FM-" + someDevice.hashCode());
             Monitor bigMonitor = new Monitor();
 
             bigMonitor.setResolutionX((int)(12.8 + (Math.random() * 6.7)) * 160);
