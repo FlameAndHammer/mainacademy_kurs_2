@@ -12,7 +12,7 @@ public class Main {
         int[] quantityOfDevices = new int[scanner.nextInt()];
         for (int i = 0; i < quantityOfDevices.length; i++) {
             Device someDevice = new Device();
-            someDevice.setManufacturer("Famous Manufacturer with Apple on the logo");
+            someDevice.setManufacturer("Famous manufacturer with apple on the logo");
             someDevice.setPrice((float)(7000 + (Math.random() * 3000)));
             someDevice.setSerialNumber("FM-MacPRO/" + (int)(100000 + (Math.random() * 899999)));
             Monitor bigMonitor = new Monitor();

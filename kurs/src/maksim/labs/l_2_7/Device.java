@@ -37,7 +37,7 @@ public class Device {
 
     @Override
     public String toString() {
-        System.out.println(Device.class.getSimpleName() + ": manufacturer = " + getManufacturer() + "; price = "
+        System.out.println(Device.class.getSimpleName() + ": manufacturer = " + getManufacturer() + "; price = USD"
         + getPrice() + "; serial number = " + getSerialNumber());
         return super.toString();
     }
@@ -78,9 +78,9 @@ public class Device {
 
         @Override
         public String toString() {
-            System.out.println(Monitor.class.getSimpleName() + ": manufacturer = " + getManufacturer() + "; price = "
+            System.out.println(Monitor.class.getSimpleName() + ": manufacturer = " + getManufacturer() + "; price = USD"
                     + getPrice() + "; serial number = " + getSerialNumber() + "; X= " + getResolutionX()
-            + "; Y = " + getResolutionY());
+            + "px; Y = " + getResolutionY() + "px");
             return super.toString();
         }
 
@@ -120,9 +120,9 @@ public class Device {
 
         @Override
         public String toString() {
-            System.out.println(EthernetAdapter.class.getSimpleName() + ": manufacturer = " + getManufacturer() + "; price = "
+            System.out.println(EthernetAdapter.class.getSimpleName() + ": manufacturer = " + getManufacturer() + "; price = USD"
                     + getPrice() + "; serial number = " + getSerialNumber() + "; speed = " + getSpeed()
-            + "; mac address = " + getMac());
+            + "Mbs; mac address = " + getMac());
             return super.toString();
         }
 
