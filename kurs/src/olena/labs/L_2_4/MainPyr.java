@@ -8,7 +8,8 @@ public class MainPyr {
     public static void main(String[] args){
     Scanner sc = new Scanner(System.in);
 
-    System.out.print("Enter number from 1 to 9: ");
+    System.out.print("Enter number: ");
     MyPyramyd.printPyramyd(sc.nextInt());
     }
 }
+
