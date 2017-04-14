@@ -22,9 +22,9 @@ public class Main {
             EthernetAdapter internetAdapter = new EthernetAdapter();
             internetAdapter.setSpeed((int)(10 + (Math.random() * 9)) * 10);
             internetAdapter.setMac("HJK7:976F:FHY7:" + ((int)(5000 + (Math.random() * 4999))));
-            someDevice.toString();
-            bigMonitor.toString();
-            internetAdapter.toString();
+            System.out.println(someDevice.toString());
+            System.out.println(bigMonitor.toString());
+            System.out.println(internetAdapter.toString());
         }
     }
 }
