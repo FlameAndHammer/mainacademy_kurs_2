@@ -11,7 +11,7 @@ public class MyPyramyd {
                 System.out.print(" ");
             }
             for(int value = 1; value <=level; value++){
-                System.out.print(value);
+                System.out.print( value);
             }
             for(int value = (level - 1); value>= 1; value--){
                 System.out.print(value);
