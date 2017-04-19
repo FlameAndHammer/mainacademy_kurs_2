@@ -77,8 +77,7 @@ public class Device {
 
         @Override
         public String toString() {
-            return Monitor.class.getSimpleName() + ": manufacturer = " + getManufacturer() + "; price = USD"
-                    + getPrice() + "; serial number = " + getSerialNumber() + "; X= " + getResolutionX()
+            return super.toString() + "; X= " + getResolutionX()
                     + "px; Y = " + getResolutionY() + "px";
         }
 
@@ -118,8 +117,7 @@ public class Device {
 
         @Override
         public String toString() {
-            return EthernetAdapter.class.getSimpleName() + ": manufacturer = " + getManufacturer() + "; price = USD"
-                    + getPrice() + "; serial number = " + getSerialNumber() + "; speed = " + getSpeed()
+            return super.toString() + "; speed = " + getSpeed()
                     + "Mbs; mac address = " + getMac();
         }
 
