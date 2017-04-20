@@ -17,7 +17,6 @@ public class Fibo1 {
              n = n1.nextInt();
         } while (n<1);
 
-
         int number = 1;
         int temp = 0;
         for (int i=1; i<n; i++){
