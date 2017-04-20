@@ -20,10 +20,10 @@ public class Main {
         for (int i = 0; i < totalRectangles; i++) {
             arr[i] = new Rectangle("PURPLE",Math.random() * 100, Math.random() * 100);
         }
-        for (int i = totalRectangles; i < totalCircles; i++) {
+        for (int i = totalRectangles; i < totalCircles + totalRectangles; i++) {
             arr[i] = new Circle("GREEN", Math.random() * 100);
         }
-        for (int i = totalRectangles + totalCircles; i < totalTriangles; i++){
+        for (int i = totalRectangles + totalCircles; i < totalTriangles + totalRectangles + totalCircles; i++){
             arr[i] = new Triangle("BLUE", Math.random() * 100,Math.random() * 100,Math.random() * 100);
         }
 
