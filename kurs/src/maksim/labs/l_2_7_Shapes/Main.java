@@ -35,10 +35,9 @@ public class Main {
                 sumCirclesArea += x.calcArea();
             else if (x instanceof Triangle)
                 sumTrianglesArea += x.calcArea();
-
-
-            sumTotalArea += sumRectanglesArea + sumCirclesArea + sumTrianglesArea;
         }
+
+        sumTotalArea = sumRectanglesArea + sumCirclesArea + sumTrianglesArea;
 
         Shape anyShape = new Shape("RED");
         System.out.println(anyShape);
