@@ -14,12 +14,10 @@ public class Triangle extends MyShapes {
     this.sideC = sideC;
     }
     @Override
-    public String toString(){return  super.toString() + "A =" + sideA + "B =" + sideB + "C =" + sideC +}
+    public String toString(){return  super.toString() + "A =" + sideA + "B =" + sideB + "C =" + sideC;}
     @Override
     public double calcArea(){
         double p = ( sideA + sideB + sideC) / 2;
         return Math.sqrt(p * (p -sideA) * (p - sideB) * (p - sideC));
-
     }
-
 }
