@@ -11,5 +11,5 @@ public class MyShapes {
 
     @Override
     public String toString(){
-        return   getClass().getSimpleName() +  "color: "  + myShapecolor;}
+        return " " +  getClass().getSimpleName() + " " + "color: "  + myShapecolor;}
 }
