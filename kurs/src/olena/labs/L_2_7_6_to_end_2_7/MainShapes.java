@@ -29,10 +29,11 @@ public class MainShapes {
             System.out.println(element + "element area is:" + element.calcArea());
         }
         System.out.println();
+        double [] area = calcAreaEachMyShapes(arrayShape);
         System.out.println("Total area of shapes is :" + calcTotalAreaMyShapes(arrayShape));
-        System.out.println("Rectangles total area: " + arrayShape[2]);
-        System.out.println("Circles total area: " + arrayShape[0]);
-        System.out.println("Triangles total area: " + arrayShape[1]);
+        System.out.println("Rectangles total area: " + area[2]);
+        System.out.println("Circles total area: " + area[0]);
+        System.out.println("Triangles total area: " + area[1]);
     }
 
     public static double calcTotalAreaMyShapes(MyShapes[] arrayShape) {
@@ -43,7 +44,7 @@ public class MainShapes {
         return SumArea;
     }
 
-    public static void calcAreaEachMyShapes(MyShapes[] arrayShape) {
+    public static double[] calcAreaEachMyShapes(MyShapes[] arrayShape) {
         double[] area = new double[3];
         for (MyShapes element : arrayShape) {
             if (element instanceof Circle)
@@ -53,7 +54,7 @@ public class MainShapes {
             else if (element instanceof Rectangle)
                 area[2] += element.calcArea();
         }
-        return ;
+        return area;
     }
 }
 
