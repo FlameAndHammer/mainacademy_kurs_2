@@ -58,5 +58,6 @@ public class Device {
         result = 31 * result + serialNumber.hashCode();
         result = 31 * result + (price != +0.0f ? Float.floatToIntBits(price) : 0);
         return result;
+
     }
 }
