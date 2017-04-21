@@ -1,7 +1,7 @@
 package _nikulin.labs.lab_2_6_1.example.testpack;
 
-import  _nikulin.labs.lab_2_6_1.com.mainacad.carpack.Car;
-import  _nikulin.labs.lab_2_6_1.example.applepack.Apple;
+import _nikulin.labs.lab_2_6_1.com.mainacad.carpack.Car;
+import _nikulin.labs.lab_2_6_1.example.applepack.Apple;
 
 public class Main {
     public static void main(String[] args) {
