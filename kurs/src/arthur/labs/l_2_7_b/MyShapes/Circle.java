@@ -18,4 +18,9 @@ public class Circle extends Shape {
         super(shapeColor);
         this.radius = radius;
     }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
+    }
 }

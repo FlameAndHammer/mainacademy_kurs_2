@@ -1,5 +1,7 @@
 package arthur.labs.l_2_7_b.MyShapes;
 
+import java.util.Comparator;
+
 /**
  * Created by arthk on 22.04.2017.
  * Create new project named MyShapes. Add package “com.brainacad.oop.testshapes”.
@@ -17,7 +19,7 @@ package arthur.labs.l_2_7_b.MyShapes;
  * and print result to console. Program output must looks like:
  * “This is Shape, color is: RED” “Shape area is: 0”
  */
-public class Shape {
+public abstract class Shape implements Drawable,Comparable {
     private String shapeColor;
 
     public Shape(String shapeColor) {
@@ -29,8 +31,36 @@ public class Shape {
         return "This is a " + getClass().getSimpleName() + ", shapeColor = " + shapeColor;
     }
 
-    public double calcArea() {
-        return 0.0;
+    public abstract double calcArea();
+
+    public String getShapeColor() {
+        return shapeColor;
     }
 
+    @Override
+    public void draw() {
+        System.out.println(toString() + ", Area is: " + calcArea());
+    }
+
+
+    @Override
+    public abstract int compareTo(Object o);
+
+
+                                    // found in the internet
+    public static Comparator<Shape> ShapeColorComparator = new Comparator<Shape>() {
+
+        public int compare(Shape shape1, Shape shape2) {
+
+            String ShapeColor1 = shape1.getShapeColor();
+            String ShapeColor2 = shape2.getShapeColor();
+
+            //ascending order
+            return ShapeColor1.compareTo(ShapeColor2);
+
+            //descending order
+            //return ShapeColor2 .compareTo(ShapeColor1 );
+        }
+    };
 }
+
