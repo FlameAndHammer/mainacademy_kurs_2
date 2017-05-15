@@ -31,88 +31,68 @@ of different types devices, setup and output characteristics of each device
 */
 
 public class Device {
-    String manufacturer;
-    float price;
-    String serialNumber;
+    private String manufacturer;
+    private float price;
+    private String serialNumber;
 
+    public Device(String manufacturer, float price, String serialNumber) {
+        this.manufacturer = manufacturer;
+        this.serialNumber = serialNumber;
+        this.price = price;
+    }
     public String getManufacturer() { return manufacturer; }
+    public float getPrice() { return price; }
 
-    public String generatorManufacturer() {
+    public String getSerialNumber() { return serialNumber; }
+    public void setManufacturer(String manufacturer) { this.manufacturer = manufacturer; }
+    public void setPrice(float price) { this.price = price; }
+
+    public void setSerialNumber(String serialNumber) { this.serialNumber = serialNumber; }
+
+    @Override
+    public String toString(){
+        return Device.class.getSimpleName() + ": manufacturer = " + getManufacturer() + ", price = " + getPrice() +
+                ", serialNumber = " + getSerialNumber();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Device)) return false;
+
+        Device device = (Device) o;
+
+        if (Float.compare(device.getPrice(), getPrice()) != 0) return false;
+        if (!getManufacturer().equals(device.getManufacturer())) return false;
+        return getSerialNumber().equals(device.getSerialNumber());
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getManufacturer().hashCode();
+        result = 31 * result + (getPrice() != +0.0f ? Float.floatToIntBits(getPrice()) : 0);
+        result = 31 * result + getSerialNumber().hashCode();
+        return result;
+    }
+    public static String generatorManufacturer() {
         String[] arrManufacturer = {"Samsung", "Dell", "Asus", "Lenovo", "Toshiba", "Sony", "Apple", "Acer", "Hewlett-Packard", "Fujitsu"};
-        manufacturer = arrManufacturer[(int)(Math.random() * 10)];
+        String manufacturer = arrManufacturer[(int)(Math.random() * 10)];
         return manufacturer;
     }
 
-
-    public void setManufacturer(String manufacturer) { this.manufacturer = manufacturer; }
-
-    public float getPrice() { return price; }
-
-    public float generatorPrice() {
-        price = (float) (Math.random () * 6000);
+    public static float generatorPrice() {
+        float price = (float) (Math.random () * 6000);
         return price;
     }
 
+    public static String generatorSerialNumber() {
+        String symbols = "qwerty12345";
+        String serialNumber = "SN: ";
+        int count = (int)(Math.random()*30);
+        for(int i=0;i<count;i++)
+            serialNumber = serialNumber + symbols.charAt((int)(Math.random()*symbols.length()));
 
-    public void setPrice(float price) { this.price = price; }
-
-    public String getSerialNumber() { return serialNumber; }
-
-    public String generatorSerialNumber() {
-       // serialNumber = (String) (Math.random () * 100000);
+        //System.out.println(serialNumber);
         return serialNumber;
-    }
-
-    public void setSerialNumber(String serialNumber) { this.serialNumber = serialNumber; }
-    @Override
-    public String toString(){
-        return Device.class.getSimpleName() + ": manufacturer =" + getManufacturer() + ", price=" + getPrice() +
-                ", serialNumber=" + getSerialNumber();
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
-
-    @Override
-    public int hashCode() {
-        int result = manufacturer.hashCode();
-        result = 31 * result + (price != +0.0f ? Float.floatToIntBits(price) : 0);
-        result = 31 * result + serialNumber.hashCode();
-        return result;
-    }
-
-}
-class Monitor extends Device {
-    int resolutionX;
-    int resolutionY;
-    void EthernetAdapter(int speed, String mac ){}
-
-    public int getResolutionX() { return resolutionX; }
-
-    public void setResolutionX(int resolutionX) { this.resolutionX = resolutionX; }
-
-    public int getResolutionY() { return resolutionY; }
-
-    public void setResolutionY(int resolutionY) { this.resolutionY = resolutionY; }
-
-    @Override
-    public String toString(){
-        return Monitor.class.getSimpleName() + ": manufacturer =" + getManufacturer() + ", price=" + getPrice() +
-                ", serialNumber=" + getSerialNumber() + ", X=" + getResolutionX() + ", Y=" + getResolutionY();
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
-
-    @Override
-    public int hashCode() {
-        int result = super.hashCode();
-        result = 31 * result + resolutionX;
-        result = 31 * result + resolutionY;
-        return result;
     }
 }

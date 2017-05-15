@@ -16,15 +16,32 @@ public class Main {
         System.out.println("LabWork_2_7_1 - 5 by Yuriy Denezhko:");
         System.out.println();
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the length of  -> array");
-        int lengthOfArray = scanner.nextInt();
+        System.out.print("Enter the value of devices of different types -> ");
+        int lengthOfArray = scanner.nextInt() * 3  ;
         Device [] deviceArr = new Device[lengthOfArray];
-        Monitor [] monitorArr = new Monitor[lengthOfArray];
 
-        for (int i = 0; i < lengthOfArray; i++){
-           deviceArr[i].setManufacturer(deviceArr[i].generatorManufacturer());
-           deviceArr[i].setPrice(deviceArr[i].generatorPrice());
-           //deviceArr[i].setSerialNumber(1);
+        for (int i = 0; i < lengthOfArray; i = i + 3){
+           deviceArr[i] = new Device(Device.generatorManufacturer(),Device.generatorPrice(),Device.generatorSerialNumber());
+
+          deviceArr[i + 1] = new Monitor(Device.generatorManufacturer(),
+                   Device.generatorPrice(),
+                   Device.generatorSerialNumber(),
+                   Monitor.generatorResolution(),
+                   Monitor.generatorResolution());
+
+          deviceArr[i + 2] = new EthernetAdapter(Device.generatorManufacturer(),
+                   Device.generatorPrice(),
+                   Device.generatorSerialNumber(),
+                   EthernetAdapter.generatorSpeed(),
+                   EthernetAdapter.generatorMac());
+        }
+        for (Device object : deviceArr)
+            System.out.println(object);
+
+
+
+        for (int i = 0; i < lengthOfArray; i =  i + 3){
+            System.out.println(deviceArr[i]);
         }
     }
 }
