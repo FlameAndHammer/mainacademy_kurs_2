@@ -3,7 +3,7 @@ package yuriy.labs.l_2_8;
 /**
  * Created by Ruble on 09.05.2017.
  */
-public class Triangle extends Shape implements Drawable {
+public class Triangle extends Shape implements Drawable, Comparable {
     private double a, b, c;
 
     public Triangle(String shapeColor, double a, double b, double c) {
@@ -57,9 +57,9 @@ public class Triangle extends Shape implements Drawable {
     }
 
     @Override
-    public int compareTo(Shape obj) {
+    public int compareTo(Object obj) {
         int result;
-        result = Double.compare(this.calcArea(), obj.calcArea());
+        result = Double.compare(this.calcArea(), ((Shape) obj).calcArea());
         return result;
     }
 }
