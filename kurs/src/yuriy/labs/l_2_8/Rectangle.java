@@ -51,9 +51,15 @@ public class Rectangle extends Shape implements Drawable  {
     }
 
     @Override
+    public int compareTo(Object o) {
+        return super.compareTo(o);
+    }
+
+    /*
+    @Override
     public int compareTo(Shape obj) {
         int result;
         result = Double.compare(this.calcArea(), obj.calcArea());
         return result;
-    }
+    }*/
 }

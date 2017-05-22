@@ -3,7 +3,7 @@ package yuriy.labs.l_2_8;
 /**
  * Created by Ruble on 09.05.2017.
  */
-public abstract class Shape {
+public abstract class Shape implements Comparable {
 
 
     private String shapeColor;
@@ -74,14 +74,18 @@ public abstract class Shape {
         return shapeColor.hashCode();
     }
 
-
-//    @Override
+    @Override
+    public int compareTo(Object o) {
+        return 0;
+    }
+/*
+   @Override
     public int compareTo(Shape obj) {
         int result;
         String str = this.shapeColor;
         result = str.compareTo(obj.shapeColor);
         return result;
-    }
+    }*/
 }
 
 

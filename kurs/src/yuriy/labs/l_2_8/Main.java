@@ -17,6 +17,12 @@ public class Main {
         Drawable rectangleObject2 = new Rectangle(Shape.randColor(), Shape.randDouble(), Shape.randDouble());
         rectangleObject1.draw();
         rectangleObject2.draw();
+
+
+
+
+
+
         //int compareRectangle = rectangleObject1.compareTo(rectangleObject2);
         //int compareTo(rectangleObject1,rectangleObject2);
         //System.out.println ("Shape area is: "  + oneShapeObject.calcArea());
