@@ -17,6 +17,9 @@ public class Main {
         Drawable rectangleObject2 = new Rectangle(Shape.randColor(), Shape.randDouble(), Shape.randDouble());
         rectangleObject1.draw();
         rectangleObject2.draw();
+        Shape shapeObject1 = (Shape) oneTriangleObject;
+        Shape shapeObject2 = (Shape) oneCircleObject;
+        System.out.println((shapeObject1).compareTo(shapeObject2));
 
 
 

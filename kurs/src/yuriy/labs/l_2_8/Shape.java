@@ -76,7 +76,7 @@ public abstract class Shape implements Comparable {
 
     @Override
     public int compareTo(Object o) {
-        return 0;
+        return 0; //TODO implement
     }
 /*
    @Override
@@ -89,11 +89,6 @@ public abstract class Shape implements Comparable {
 }
 
 
-interface Drawable {
-
-    abstract void draw();
-
-}
 /*
 
 interface Comparable {

@@ -1,5 +1,7 @@
 package yuriy.labs.l_2_8;
 
+import java.util.Objects;
+
 /**
  * Created by Ruble on 09.05.2017.
  */
@@ -46,10 +48,10 @@ public class Circle extends Shape implements Drawable{
         return result;
     }
 
-   // @Override
-    public int compareTo(Shape obj) {
+    @Override
+    public int compareTo(Object obj) {
         int result;
-        result = Double.compare(this.calcArea(), obj.calcArea());
+        result = Double.compare(this.calcArea(), ((Shape)obj).calcArea());
         return result;
     }
 }
