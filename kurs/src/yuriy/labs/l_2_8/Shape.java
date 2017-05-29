@@ -3,10 +3,10 @@ package yuriy.labs.l_2_8;
 /**
  * Created by Ruble on 09.05.2017.
  */
-public abstract class Shape implements Comparable {
+public abstract class Shape implements Drawable, Comparable {
 
 
-    private String shapeColor;
+    public String shapeColor;
     //double sumArea;
     public Shape(String shapeColor) {
         this.shapeColor = shapeColor;
@@ -75,6 +75,7 @@ public abstract class Shape implements Comparable {
     }
 
     @Override
+
     public int compareTo(Object o) {
         return 0; //TODO implement
     }

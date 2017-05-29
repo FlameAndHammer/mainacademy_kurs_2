@@ -50,7 +50,10 @@ public class Circle extends Shape implements Drawable{
 
     @Override
     public int compareTo(Object obj) {
+        Shape shapeObj = (Shape)obj;
         int result;
+        result = this.shapeColor.compareTo (shapeObj.shapeColor);
+        if(result != 0) return result;
         result = Double.compare(this.calcArea(), ((Shape)obj).calcArea());
         return result;
     }

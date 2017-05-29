@@ -1,5 +1,7 @@
 package yuriy.labs.l_2_8;
 
+import java.util.Arrays;
+
 /**
  * Created by Ruble on 09.05.2017.
  */
@@ -13,18 +15,60 @@ public class Main {
         Drawable oneCircleObject = new Circle(Shape.randColor(), Shape.randDouble());
         oneCircleObject.draw();
         System.out.println("\n" + "----------------------------------------------------------" + "\n" + "Lab Work 2-8-3:");
-        Drawable rectangleObject1 = new Rectangle(Shape.randColor(), Shape.randDouble(), Shape.randDouble());
-        Drawable rectangleObject2 = new Rectangle(Shape.randColor(), Shape.randDouble(), Shape.randDouble());
-        rectangleObject1.draw();
-        rectangleObject2.draw();
-        Shape shapeObject1 = (Shape) oneTriangleObject;
-        Shape shapeObject2 = (Shape) oneCircleObject;
-        System.out.println((shapeObject1).compareTo(shapeObject2));
+        Shape rectangleObject1 = new Rectangle(Shape.randColor(), Shape.randDouble(), Shape.randDouble());
+        Shape rectangleObject2 = new Rectangle(Shape.randColor(), Shape.randDouble(), Shape.randDouble());
+        System.out.print ("rectangleObject1: "); rectangleObject1.draw();
+        System.out.print ("rectangleObject2: "); rectangleObject2.draw();
+        System.out.println("\n" + "compareTo (rectangleObject1, rectangleObject2): " + rectangleObject1.compareTo(rectangleObject2));
+
+        Shape circleObject1 = new Circle(Shape.randColor(), Shape.randDouble());
+        Shape circleObject2 = new Circle(Shape.randColor(), Shape.randDouble());
+        System.out.println();
+        System.out.print ("circleObject1: "); circleObject1.draw();
+        System.out.print ("circleObject2: "); circleObject2.draw();
+        System.out.println("\n" + "compareTo (circleObject1, circleObject2): " + circleObject1.compareTo(circleObject2));
+
+        Shape triangleObject1 = new Triangle(Shape.randColor(), Shape.randDouble(), Shape.randDouble(), Shape.randDouble());
+        Shape triangleObject2 = new Triangle(Shape.randColor(), Shape.randDouble(), Shape.randDouble(), Shape.randDouble());
+        System.out.println();
+        System.out.print ("triangleObject1: "); triangleObject1.draw();
+        System.out.print ("triangleObject2: "); triangleObject2.draw();
+        System.out.println("\n" + "compareTo (triangleObject1, triangleObject2): " + triangleObject1.compareTo(triangleObject2));
 
 
+        System.out.println("\n" + "----------------------------------------------------------" + "\n" + "Lab Work 2-8-4:");
+        System.out.println("\n" + "----------------------------------------------------------" + "\n" + "Not sorted array is:");
+
+        Rectangle[] arr2 = new Rectangle[6];
+        for (int i = 0; i < arr2.length; i++){
+             arr2 [i] = new Rectangle(Shape.randColor(), Shape.randDouble(), Shape.randDouble());
+             arr2 [i].draw();
+        }
+        System.out.println("\n" + "----------------------------------------------------------" + "\n" + "The sort array is:");
+        Arrays.sort(arr2);
+        for (int i = 0; i < arr2.length; i++){
+            arr2 [i].draw();
+        }
 
 
+        System.out.println("\n" + "----------------------------------------------------------" + "\n" + "Lab Work 2-8-5:");
 
+        Shape [] arrayOfDifferentShapes = new Shape[10];
+        arrayOfDifferentShapes [0] = new Circle(Shape.randColor(), Shape.randDouble());
+        for (int i = 1; i < arrayOfDifferentShapes.length; i += 3){
+            arrayOfDifferentShapes [i] = new Rectangle(Shape.randColor(), Shape.randDouble(), Shape.randDouble());
+            arrayOfDifferentShapes [i + 1] = new Triangle(Shape.randColor(), Shape.randDouble(), Shape.randDouble(), Shape.randDouble());
+            arrayOfDifferentShapes [i + 2] = new Circle(Shape.randColor(), Shape.randDouble());
+        }
+        System.out.println("\n" + "----------------------------------------------------------" + "\n" + "Not sorted array is:");
+        for (int i = 0; i < arrayOfDifferentShapes.length; i++){
+            arrayOfDifferentShapes [i].draw();
+        }
+        System.out.println("\n" + "----------------------------------------------------------" + "\n" + "The sort array is:");
+        Arrays.sort(arrayOfDifferentShapes);
+        for (int i = 0; i < arrayOfDifferentShapes.length; i++){
+            arrayOfDifferentShapes [i].draw();
+        }
 
         //int compareRectangle = rectangleObject1.compareTo(rectangleObject2);
         //int compareTo(rectangleObject1,rectangleObject2);

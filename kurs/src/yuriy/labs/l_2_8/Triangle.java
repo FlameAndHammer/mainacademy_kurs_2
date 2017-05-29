@@ -56,10 +56,22 @@ public class Triangle extends Shape implements Drawable, Comparable {
         System.out.println(toString() + ",  area is: " + calcArea());
     }
 
+/*
     @Override
     public int compareTo(Object obj) {
         int result;
         result = Double.compare(this.calcArea(), ((Shape) obj).calcArea());
         return result;
     }
+*/
+@Override
+public int compareTo(Object obj) {
+    Shape shapeObj = (Shape)obj;
+    int result;
+    result = this.shapeColor.compareTo (shapeObj.shapeColor);
+    if(result != 0) return result;
+    result = Double.compare(this.calcArea(), ((Shape)obj).calcArea());
+    return result;
+}
+
 }

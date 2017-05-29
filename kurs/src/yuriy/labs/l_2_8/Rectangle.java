@@ -49,11 +49,11 @@ public class Rectangle extends Shape implements Drawable  {
     public void draw() {
         System.out.println(toString() + ",  area is: " + calcArea());
     }
-
+/*
     @Override
     public int compareTo(Object o) {
-        return super.compareTo(o);
-    }
+        return 0; //super.compareTo(o);
+    }*/
 
     /*
     @Override
@@ -62,4 +62,14 @@ public class Rectangle extends Shape implements Drawable  {
         result = Double.compare(this.calcArea(), obj.calcArea());
         return result;
     }*/
+    @Override
+    public int compareTo(Object obj) {
+        Shape shapeObj = (Shape)obj;
+        int result;
+        result = this.shapeColor.compareTo (shapeObj.shapeColor);
+        if(result != 0) return result;
+        result = Double.compare(this.calcArea(), ((Shape)obj).calcArea());
+        return result;
+    }
+
 }
