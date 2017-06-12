@@ -11,8 +11,8 @@ public class Main {
             Shape rect = Shape.parseShape("Rectangle:Red:10,8");
 //            Shape rect = Shape.parseShape("Rectangle:Red10,8");
             rect.draw();
-            Shape triangle = Shape.parseShape("Triangle:Green:10,9,15");
-//            Shape triangle = Shape.parseShape("Tringle:Green:10,9,15");
+//            Shape triangle = Shape.parseShape("Triangle:Green:10,9,15");
+            Shape triangle = Shape.parseShape("Tringle:Green:10,9,15");
             triangle.draw();
         } catch (InvalidShapeStringException ee) {
             System.out.println("A string describing an instance of the class is incorrect!");

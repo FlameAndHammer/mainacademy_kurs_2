@@ -1,6 +1,6 @@
 package _nikulin.labs.lab_2_7_1__2_7_5;
 
-public class Device {
+     class Device {
         // lab 2_7_1
     private String manufacturer,
                    serialNumber;
