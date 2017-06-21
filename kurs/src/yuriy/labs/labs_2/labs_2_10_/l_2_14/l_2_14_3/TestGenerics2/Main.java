@@ -9,10 +9,10 @@ public class Main
 {
     public static void main(String[] args)
     {
-        Number maxValue =0;
-        System.out.println( maxValue.getClass());
+        /*Number maxValue =0.5;
+        System.out.println( maxValue.getClass().getName());*/
 
-        /*System.out.println("------------------The first array-----------------");
+        System.out.println("------------------The first array-----------------");
         System.out.print("Enter the length of the first array -> ");
         Scanner sc = new Scanner(System.in);
         int sizeOfArray1 = sc.nextInt();
@@ -24,10 +24,9 @@ public class Main
         }
         System.out.print("Enter the first maxElem -> ");
         int maxElem1 = sc.nextInt();
-        System.out.print("The number of elements in the first of array that are greater than maxElem = ");
-        System.out.println(MyTestMethod.calcNum(array1,maxElem1));
+        System.out.print("The sum of elements in the first array, that are greater than a specified element = ");
+        System.out.println(MyTestMethod.calcSum(array1,maxElem1));
         System.out.println();
-
         System.out.println("------------------The second array-----------------");
         System.out.print("Enter the length of the second array -> ");
         int sizeOfArray2 = sc.nextInt();
@@ -42,8 +41,7 @@ public class Main
         System.out.print("Enter the second maxElem -> ");
         Double maxElem2 = sc.nextDouble();
         sc.close();
-        System.out.print("The number of elements in the first of array that are greater than maxElem = ");
-        System.out.println(MyTestMethod.calcNum(array2,maxElem2));
-*/
+        System.out.print("The sum of elements in the second array, that are greater than a specified element = ");
+        System.out.println(MyTestMethod.calcSum(array2,maxElem2));
     }
 }

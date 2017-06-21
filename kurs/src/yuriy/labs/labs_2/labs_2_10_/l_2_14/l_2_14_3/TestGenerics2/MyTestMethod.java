@@ -1,35 +1,54 @@
 package yuriy.labs.labs_2.labs_2_10_.l_2_14.l_2_14_3.TestGenerics2;
 
 import java.util.Arrays;
+/*
+  Created by Ruble on 20.06.2017.
+*/
 
-/**
- * Created by Ruble on 20.06.2017.
- */
+
 public class MyTestMethod
 {
 
 
-    /*public static <T extends Number>  T calcSum  (T[] array, T maxValue) //implements Comparable <Object>
+    public static <T extends Number>  String calcSum  (T[] array, T maxValue) //implements Comparable <Object>
     {
-        T result = null;
-        String srt = "";
+        //T result;
+        String srtResult = "";
+        String srt =  array[0].getClass().getName();
 
-
-        for (int i = 0; i < array.length; i++) {
-            srt = (String)(maxValue.getClass());
-
-            switch ( )
+        switch (srt)
+        {
+            case "java.lang.Integer":
             {
-
+                Integer result = 0;
+                for (int i = 0; i < array.length; i++)
+                {
+                 if (maxValue.intValue() < array[i].intValue())
+                    {
+                        result += array[i].intValue();
+                    }
+                }
+                srtResult = result.toString();
+                break;
             }
-
-
-            //if (array[i].compareTo(maxValue) > 0) {
-                //result = result. + array[i];
-            //}
+            case "java.lang.Double":
+            {
+                Double result = 0.0;
+                for (int i = 0; i < array.length; i++)
+                {
+                    if (maxValue.doubleValue() < array[i].doubleValue())
+                    {
+                        result += array[i].doubleValue();
+                    }
+                }
+                srtResult = result.toString();
+                break;
+            }
+            default: srtResult = "Not in the assignment";
         }
-        return result;
-    }*/
+
+        return srtResult;
+    }
     public static <T extends Comparable<T>>  Integer calcNum  (T[] array, T maxElem) //implements Comparable <Object>
     {
         int result = 0;
