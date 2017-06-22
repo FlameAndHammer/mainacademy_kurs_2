@@ -10,6 +10,21 @@ public class MyTestMethod
 {
 
 
+    public static <T extends Number>  Double calcSum2  (T[] array, T maxValue) //implements Comparable <Object>
+    {
+
+                Double result = 0.0;
+                for (int i = 0; i < array.length; i++) {
+                    if (maxValue.doubleValue() < array[i].doubleValue()) {
+                        result += array[i].doubleValue();
+                    }
+                }
+
+        return result;
+    }
+
+
+
     public static <T extends Number>  String calcSum  (T[] array, T maxValue) //implements Comparable <Object>
     {
         //T result;

@@ -27,6 +27,9 @@ public class Main
         System.out.print("The sum of elements in the first array, that are greater than a specified element = ");
         System.out.println(MyTestMethod.calcSum(array1,maxElem1));
         System.out.println();
+        System.out.print("The sum of elements in the first array, that are greater than a specified element V.2 = ");
+        System.out.println(MyTestMethod.calcSum2(array1,maxElem1));
+        System.out.println();
         System.out.println("------------------The second array-----------------");
         System.out.print("Enter the length of the second array -> ");
         int sizeOfArray2 = sc.nextInt();
@@ -43,5 +46,8 @@ public class Main
         sc.close();
         System.out.print("The sum of elements in the second array, that are greater than a specified element = ");
         System.out.println(MyTestMethod.calcSum(array2,maxElem2));
+        System.out.println();
+        System.out.print("The sum of elements in the second array, that are greater than a specified element V.2 = ");
+        System.out.println(MyTestMethod.calcSum2(array2,maxElem2));
     }
 }
