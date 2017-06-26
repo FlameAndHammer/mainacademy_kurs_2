@@ -20,7 +20,7 @@ public class Main {
 
 
         Drink latte3 = new Lemon(new Milk(new Milk(new Cofe())));
-        latte2.drink();
+        latte2.drink(); //todo use latte3
         System.out.println();
 
        /* Drink cofe2 = new Cofe(new Cofe());
