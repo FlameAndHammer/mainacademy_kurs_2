@@ -1,4 +1,4 @@
-package yuriy.labs.decorator.cafe;
+package yuriy.labs.ClassWork.decorator.cafe;
 
 /**
  * Created by Ruble on 23.06.2017.
@@ -20,7 +20,7 @@ public class Main {
 
 
         Drink latte3 = new Lemon(new Milk(new Milk(new Cofe())));
-        latte2.drink(); //todo use latte3
+        latte3.drink(); //todo use latte3 // sorry, не доглядел....
         System.out.println();
 
        /* Drink cofe2 = new Cofe(new Cofe());
