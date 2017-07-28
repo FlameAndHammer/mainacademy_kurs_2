@@ -8,7 +8,8 @@ public class Main {
 
   public static void main(String[] args) {
 
-    MyClassFOrSer instance = new MyClassFOrSer(15, "Hello");
+    MyClassFOrSer instance = new MyClassFOrSer(15, "Hello", "SomeStr");
+    instance.setParentstr("String in parent");
     Object newInst = null;
 
     try (FileOutputStream fileStream = new FileOutputStream(FILE);
