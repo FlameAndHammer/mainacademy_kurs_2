@@ -20,8 +20,8 @@ public class MyFileCopy {
             throw new IllegalArgumentException("Illegal arguments!");
         }
 
-        FileInputStream fIs;
-        FileOutputStream fOs;
+        FileInputStream fIs; //TODO: resources should be closed
+        FileOutputStream fOs;//TODO: to achieve this use "try with resources" or try/finally
 
         try {
             fIs = new FileInputStream(args[0]);

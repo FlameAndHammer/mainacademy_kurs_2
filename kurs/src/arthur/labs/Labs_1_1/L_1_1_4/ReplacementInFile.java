@@ -24,13 +24,13 @@ public class ReplacementInFile {
         // record to fileContent in RAM
         try {
             fileReader = new FileReader(fileName);
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            BufferedReader bufferedReader = new BufferedReader(fileReader); //TODO: should be closed as well
             String s = bufferedReader.readLine();
             while(s != null){
                 fileContent +=  s+"\n";
                 s = bufferedReader.readLine();
             }
-            fileReader.close();
+            fileReader.close(); //TODO: best practices is close resources in "finally" or using "try with resources"
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -43,7 +43,7 @@ public class ReplacementInFile {
             fileWriter = new FileWriter(fileName);
             fileWriter.write(fileContent);
             fileWriter.flush();
-            fileWriter.close();
+            fileWriter.close();//TODO: best practices is close resources in "finally" or using "try with resources"
 
         } catch (IOException e) {
             e.printStackTrace();

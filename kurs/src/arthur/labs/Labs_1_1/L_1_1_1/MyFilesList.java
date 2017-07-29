@@ -13,7 +13,7 @@ import java.io.File;
 
 public class MyFilesList {
  public static void main(String[] args) {
-  File homeDirectory = new File("E:\\Projects\\mainacademy_kurs_2\\kurs\\src\\arthur");
+  File homeDirectory = new File("E:\\Projects\\mainacademy_kurs_2\\kurs\\src\\arthur"); //TODO: use relative path instead of absolute
   File[] files = homeDirectory.listFiles();
   for (File file : files) {
    System.out.println(file.getName());

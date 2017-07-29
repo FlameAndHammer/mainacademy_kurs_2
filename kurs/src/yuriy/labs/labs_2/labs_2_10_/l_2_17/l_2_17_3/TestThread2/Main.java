@@ -29,13 +29,15 @@ public class Main
         mySumCount2.setArrayOfInteger(myArray);
 
 
-        Thread thread1 = new Thread();
-        Thread thread2 = new Thread();
-        thread1.start();
-        thread2.start();
+        Thread thread1 = new Thread(); //дополнительные треды создавать не нужно
+        Thread thread2 = new Thread(); //потому что MySumCount наследуется от тред
+                                       //но если создаешь то передай им нужную работу
+        thread1.start();               //потому что эти потоки ничего не делают
+        thread2.start();               //когда запускаются
 
-        mySumCount1.run();
-        mySumCount2.run();
+        mySumCount1.run();             //а вызов метода run выполняет работу в основном потоке
+        mySumCount2.run();             //и получается что работа проходит не паралельно в разных потоках
+                                       //а последовательно в одном и том же потоке, а два потока запускаются пустыми
 
         System.out.print("Sum of array elements1: ");
         System.out.println (mySumCount1.resultSum);

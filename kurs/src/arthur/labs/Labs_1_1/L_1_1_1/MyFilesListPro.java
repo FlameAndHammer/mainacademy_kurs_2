@@ -22,6 +22,9 @@ public class MyFilesListPro {
         }
 
     }
+
+    //TODO: method names should begin with a lowercase
+    //TODO: fix logic (directories are printed twice)
     public static void MyListFiles(File f){
         File[] files = f.listFiles();
         for(File file: files){

@@ -9,9 +9,11 @@ public class Main
     {
         System.out.println("------ B O M B -------");
         MyTimeBomb bomb1 = new MyTimeBomb();
-        Thread thread1 = new Thread();
-        bomb1.run();
-        thread1.start();
+        Thread thread1 = new Thread();  //для того что бы запустить задачу в новом потоке,
+                                        // поток должен знать про эту задачу
+                                        //(использовать конструктор, который принимает Runnable)
+        bomb1.run();   //работа, которая написана в методе run выполнится НЕ в новом потоке, а в main
+        thread1.start(); //а новый поток не выполняет никакой работы
 
     }
 }

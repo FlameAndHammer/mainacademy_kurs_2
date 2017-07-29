@@ -14,10 +14,12 @@ public class MyFileListPro {
         } else MyDirFiles(new File(args[0]));
     }
 
+    //TODO: method names should begin with a lowercase
+    //TODO: fix logic (directories are printed twice)
     public static void MyDirFiles(File f) {
-        File[]files =f.listFiles();
-        for (File file:files){
-            if(file.isDirectory()){
+        File[]files = f.listFiles();
+        for (File file:files) {
+            if(file.isDirectory()) {
                 System.out.println(file.getName());
                 MyDirFiles(file);
             }

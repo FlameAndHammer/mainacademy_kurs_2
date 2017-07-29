@@ -14,7 +14,7 @@ public class MyPrintFile {
             return;
         }
         BufferedReader buffReader =null;
-        try {
+        try {       //TODO: use try with resources
             buffReader = new BufferedReader(new FileReader(args[0]));
             boolean ss;
             while (ss = buffReader.readLine() != null) {

@@ -18,7 +18,7 @@ public class PrintFile {
         }
 
         BufferedReader bReader = null;
-        try {
+        try { //TODO: use "try with resources" instead of try/finally
             bReader = new BufferedReader(new FileReader(args[0]));
 
             String s2 ;

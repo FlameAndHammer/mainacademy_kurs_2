@@ -43,8 +43,8 @@ public class Main
         mySumCount2.setStopIndex(myArray.length);
         mySumCount2.setArrayOfInteger(myArray);
 
-        mySumCount1.run();
-        mySumCount2.run();
+        mySumCount1.run();  //для того что бы запустить Runnable в новом потоке, нужно создать Thread
+        mySumCount2.run();  //эти два Runnable запускаются сейчас в основном потоке последовательно, а не паралельно
 
         System.out.print("Sum of array elements1: ");
         System.out.println (mySumCount1.resultSum);

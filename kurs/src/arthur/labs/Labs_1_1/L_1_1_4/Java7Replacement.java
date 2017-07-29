@@ -12,7 +12,7 @@ import java.nio.file.Paths;
 /**
  * Created by arthk on 20.07.2017.
  */
-public class Java7Replacement {
+public class Java7Replacement { //Good research
 
     public static void main(String[] args) {
 
