@@ -20,16 +20,14 @@ public class MyFileCopy {
             throw new IllegalArgumentException("Illegal arguments!");
         }
 
-        FileInputStream fIs; //TODO: resources should be closed
-        FileOutputStream fOs;//TODO: to achieve this use "try with resources" or try/finally
 
-        try {
-            fIs = new FileInputStream(args[0]);
-            fOs = new FileOutputStream(args[1]);
+
+        try ( FileInputStream fIs = new FileInputStream(args[0]);
+        FileOutputStream fOs = new FileOutputStream(args[1]) )
+        {
             int c;
-            while ((c = fIs.read()) != -1) {
-                fOs.write(c);
-            }
+            while ((c = fIs.read()) != -1)   fOs.write(c);
+
         } catch (IOException e) {
             e.printStackTrace();
         }

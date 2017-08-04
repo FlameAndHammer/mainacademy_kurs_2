@@ -17,24 +17,17 @@ public class PrintFile {
             return;
         }
 
-        BufferedReader bReader = null;
-        try { //TODO: use "try with resources" instead of try/finally
-            bReader = new BufferedReader(new FileReader(args[0]));
 
-            String s2 ;
-            while (( s2 = bReader.readLine()) != null) {
-                    System.out.println(s2);
+        try (BufferedReader bReader = new BufferedReader(new FileReader(args[0]) ) )
+        {
+            String s =  bReader.readLine();
+            while (s != null ) {
+                    s =  bReader.readLine();
+                   if (s != null ) System.out.println(s);
             }
         }
         catch (IOException ex){
             ex.printStackTrace();
-        }
-        finally {
-            try {
-                bReader.close();
-            } catch(Exception ex1) {
-                ex1.printStackTrace();
-            }
         }
     }
 }

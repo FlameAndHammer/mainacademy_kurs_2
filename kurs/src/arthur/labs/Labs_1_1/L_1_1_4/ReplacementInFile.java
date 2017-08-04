@@ -11,26 +11,22 @@ import java.util.Scanner;
 public class ReplacementInFile {
 
     public static void main(String[] args) {
-        // Read file from from the keyboard
+            // Read file from from the keyboard
         System.out.println("Input a file path");
         Scanner sc = new Scanner(System.in);
         String fileName = sc.nextLine();
 
-
-        FileReader fileReader;
-        FileWriter fileWriter;
         String fileContent = "";
 
-        // record to fileContent in RAM
-        try {
-            fileReader = new FileReader(fileName);
-            BufferedReader bufferedReader = new BufferedReader(fileReader); //TODO: should be closed as well
-            String s = bufferedReader.readLine();
-            while(s != null){
-                fileContent +=  s+"\n";
+            // record to fileContent in RAM
+        try ( FileReader fileReader = new FileReader(fileName);
+            BufferedReader bufferedReader = new BufferedReader(fileReader))
+        {   String s = bufferedReader.readLine();
+            while (s != null) {
+                fileContent += s + "\n";
                 s = bufferedReader.readLine();
             }
-            fileReader.close(); //TODO: best practices is close resources in "finally" or using "try with resources"
+            fileReader.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -39,12 +35,10 @@ public class ReplacementInFile {
         fileContent = fileContent.replace("public", "private");
 
              // record on hard drive
-        try {
-            fileWriter = new FileWriter(fileName);
+        try (FileWriter fileWriter = new FileWriter(fileName))
+        {
             fileWriter.write(fileContent);
             fileWriter.flush();
-            fileWriter.close();//TODO: best practices is close resources in "finally" or using "try with resources"
-
         } catch (IOException e) {
             e.printStackTrace();
         }
