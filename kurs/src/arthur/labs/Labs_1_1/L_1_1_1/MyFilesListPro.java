@@ -16,23 +16,26 @@ public class MyFilesListPro {
         if(args.length == 0){
             File homeDirectory =// new File(".");
                     new File(Paths.get(".").toAbsolutePath().normalize().toString());
-            MyListFiles(homeDirectory);
+            myListFiles(homeDirectory);
         }else{
-            MyListFiles(new File(args[0])); // ?
+            myListFiles(new File(args[0]));
         }
 
     }
 
-    //TODO: method names should begin with a lowercase
-    //TODO: fix logic (directories are printed twice)
-    public static void MyListFiles(File f){
+
+    public static void myListFiles(File f){
         File[] files = f.listFiles();
         for(File file: files){
+
             if(file.isDirectory()){ // checking folder for files inside it by recursion
-                System.out.println(file.getName()); // print folder name
-                MyListFiles(file);
+                System.out.println("Folder: " + file.getName()); // print folder name
+                myListFiles(file);
             }
-            System.out.println(file.getName()); // print file name
+            else {
+                System.out.println("File: " + file.getName()); // print file name
+
+            }
         }
     }
 }
