@@ -1,4 +1,4 @@
-package yuriy.labs.labs_2.labs_2_10_.l_2_17.l_2_17_4.TestThread2;
+package yuriy.labs.labs_2.labs_2_10_.l_2_17.l_2_17_3_v2.TestThread2;
 
 /**
  * Created by Ruble on 11.07.2017.
@@ -6,24 +6,10 @@ package yuriy.labs.labs_2.labs_2_10_.l_2_17.l_2_17_4.TestThread2;
 
 
 
-
-/*
-
----------------------------  ГДЕ ЗДЕСЬ ИСПОЛЬЗОВАТЬ join() method? -------------------------
-
-
-        Remind that student should apply his or her knowledge of:
-        • how to create a thread, how to use join() method;
-        Execute following steps:
-        • Add new class MySumCount and provide all necessary code
-        • In method main() provide all necessary code to use two instance of
-        MySumCount to calculate sum of integer array elements.
-*/
-
-
 public class Main
 {
     public static void main(String[] args) throws InterruptedException {
+/*
         int[] myArray = new int[1000];
         MySumCount mySumCount1 = new MySumCount();
         MySumCount mySumCount2 = new MySumCount();
@@ -42,8 +28,7 @@ public class Main
         mySumCount2.setStopIndex(myArray.length);
         mySumCount2.setArrayOfInteger(myArray);
 
-        mySumCount1.run();  //для того что бы запустить Runnable в новом потоке, нужно создать Thread
-        mySumCount2.run();  //эти два Runnable запускаются сейчас в основном потоке последовательно, а не паралельно
+
         Thread thread1 = new Thread(mySumCount1);
         Thread thread2 = new Thread(mySumCount2);
         thread1.start();
@@ -51,9 +36,10 @@ public class Main
         thread1.join();
         thread2.join();
 
+        */
+/*mySumCount1.run();
+        mySumCount2.run();*//*
 
-       /* mySumCount1.run();
-        mySumCount2.run();*/
 
         System.out.print("Sum of array elements1: ");
         System.out.println (mySumCount1.resultSum);
@@ -63,5 +49,6 @@ public class Main
 
         System.out.print("Sum of all array elements: ");
         System.out.println (mySumCount1.resultSum + mySumCount2.resultSum);
+*/
     }
 }

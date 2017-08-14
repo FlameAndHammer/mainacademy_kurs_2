@@ -1,8 +1,11 @@
+/*
 package yuriy.labs.labs_2.labs_2_10_.l_2_17.l_2_17_3.TestThread2;
 
+*/
 /**
  * Created by Ruble on 11.07.2017.
- */
+ *//*
+
 
 
 
@@ -24,20 +27,30 @@ public class Main
         mySumCount1.setStopIndex(myArray.length/2);
         mySumCount1.setArrayOfInteger(myArray);
 
-        mySumCount2.setStartIndex(myArray.length/2 + 1);
+        mySumCount2.setStartIndex(myArray.length/2);
         mySumCount2.setStopIndex(myArray.length);
         mySumCount2.setArrayOfInteger(myArray);
 
 
-        Thread thread1 = new Thread(); //дополнительные треды создавать не нужно
-        Thread thread2 = new Thread(); //потому что MySumCount наследуется от тред
-                                       //но если создаешь то передай им нужную работу
-        thread1.start();               //потому что эти потоки ничего не делают
-        thread2.start();               //когда запускаются
+        Thread thread1 = new Thread(); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+        Thread thread2 = new Thread(); //пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ MySumCount пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ
+                                       //пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+        thread1.start();               //пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+        thread2.start();               //пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+        Thread thread1 = new Thread(mySumCount1);
+        Thread thread2 = new Thread(mySumCount2);
+        thread1.start();
+        thread2.start();
+        thread1.join();
+        thread2.join();
 
-        mySumCount1.run();             //а вызов метода run выполняет работу в основном потоке
-        mySumCount2.run();             //и получается что работа проходит не паралельно в разных потоках
-                                       //а последовательно в одном и том же потоке, а два потока запускаются пустыми
+        mySumCount1.run();             //пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ run пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+        mySumCount2.run();             //пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+                                       //пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+        */
+/*mySumCount1.run();
+        mySumCount2.run();*//*
+
 
         System.out.print("Sum of array elements1: ");
         System.out.println (mySumCount1.resultSum);
@@ -49,3 +62,4 @@ public class Main
         System.out.println (mySumCount1.resultSum + mySumCount2.resultSum);
     }
 }
+*/

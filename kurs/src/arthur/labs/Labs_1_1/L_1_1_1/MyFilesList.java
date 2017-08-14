@@ -17,7 +17,8 @@ public class MyFilesList {
   File homeDirectory = new File(path);
 
   File[] files = homeDirectory.listFiles();
-  for (File file : files) {
+  for (File file : files)
+  {
    System.out.println(file.getName());
   }
  }
